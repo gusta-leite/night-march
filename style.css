@@ -1,0 +1,114 @@
+@media (max-width: 768px) {
+    #not_show {
+        display: none;
+    }
+}
+
+/* body css */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    background-color: #121113;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: none;
+}
+
+.cursor {
+    mix-blend-mode: exclusion;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/*hero section css */
+
+.hero {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.landing {
+    background: linear-gradient(329deg, #121113, #2640ea, #121113, #121113);
+    background-size: 800% 800%;
+
+    -webkit-animation: gradient 30s ease infinite;
+    -moz-animation: gradient 30s ease infinite;
+    -o-animation: gradient 30s ease infinite;
+    animation: gradient 30s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+    0%{background-position:66% 0%}
+    50%{background-position:35% 100%}
+    100%{background-position:66% 0%}
+}
+@-moz-keyframes gradient {
+    0%{background-position:66% 0%}
+    50%{background-position:35% 100%}
+    100%{background-position:66% 0%}
+}
+@-o-keyframes gradient {
+    0%{background-position:66% 0%}
+    50%{background-position:35% 100%}
+    100%{background-position:66% 0%}
+}
+@keyframes gradient {
+    0%{background-position:66% 0%}
+    50%{background-position:35% 100%}
+    100%{background-position:66% 0%}
+}
+
+.bento {
+    min-block-size: 100vh;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1ch;
+    padding: 1ch;
+}
+
+.bento__container {
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr 2fr 2fr;
+    gap: 1ch;
+    min-height: inherit;
+    flex: 2 0 320px;
+}
+
+.bento__container[variant-1] {
+    --bg: #837AED;
+    grid-template-columns: 3fr 1fr 4fr;
+}
+
+.bento__container[variant-2] {
+    --bg: #72F286;
+    grid-template-columns: 1fr 2fr;
+}
+
+.bento__container[variant-3] {
+    --bg: #837AED;
+    grid-template-columns: 3fr 1fr 2fr;
+}
+
+.bento__item {
+    height: 100%;
+    width: 100%;
+    grid-column: var(--columns, span 1);
+    grid-row: var(--rows, span 1);
+    background-color: var(--bg);
+    border-radius: 1rem;
+}
