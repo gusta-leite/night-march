@@ -2,6 +2,16 @@
     #not_show {
         display: none;
     }
+
+    #logofin {
+        min-width: 70%;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero {
+        margin-top: -12vh;
+    }
 }
 
 /* body css */
@@ -11,7 +21,6 @@ body {
     padding: 0;
     overflow: auto;
     overflow-x: hidden;
-    background-color: #121113;
 }
 
 body::-webkit-scrollbar {
@@ -32,19 +41,75 @@ a {
     z-index: 2;
 }
 
+.select {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+/* nav css */
+
+.navbar {
+    background-color: rgba(219, 50, 77, 0.4);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5vw;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10vh;
+    margin-top: 3vh;
+    gap: 1ch;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav ms-auto me-auto mb-2 mb-lg-0 {
+    justify-content: center;
+}
+
+.navbar img {
+    width: 70%;
+}
+
+.navbar a {
+    color: #fffff0;
+    font-family: MuseoModerno;
+    display: inline-block;
+    text-align: center;
+    padding: 16px;
+    font-size: 18px;
+}
+
+.nav-item a:hover {
+    text-decoration: underline;
+    cursor: none;
+}
+
+.nav-item img:hover {
+    mix-blend-mode: exclusion;
+}
+
 /*hero section css */
 
 .hero {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
     align-items: center;
     overflow-x: hidden;
+    object-fit: contain;
+    background-color: #121113;
 }
+
 
 .landing {
     background: linear-gradient(329deg, #121113, #2640ea, #121113, #121113);
     background-size: 800% 800%;
-
     -webkit-animation: gradient 30s ease infinite;
     -moz-animation: gradient 30s ease infinite;
     -o-animation: gradient 30s ease infinite;
@@ -52,33 +117,114 @@ a {
 }
 
 @-webkit-keyframes gradient {
-    0%{background-position:66% 0%}
-    50%{background-position:35% 100%}
-    100%{background-position:66% 0%}
+    0% {
+        background-position: 66% 0%
+    }
+
+    50% {
+        background-position: 35% 100%
+    }
+
+    100% {
+        background-position: 66% 0%
+    }
 }
+
 @-moz-keyframes gradient {
-    0%{background-position:66% 0%}
-    50%{background-position:35% 100%}
-    100%{background-position:66% 0%}
+    0% {
+        background-position: 66% 0%
+    }
+
+    50% {
+        background-position: 35% 100%
+    }
+
+    100% {
+        background-position: 66% 0%
+    }
 }
+
 @-o-keyframes gradient {
-    0%{background-position:66% 0%}
-    50%{background-position:35% 100%}
-    100%{background-position:66% 0%}
+    0% {
+        background-position: 66% 0%
+    }
+
+    50% {
+        background-position: 35% 100%
+    }
+
+    100% {
+        background-position: 66% 0%
+    }
 }
+
 @keyframes gradient {
-    0%{background-position:66% 0%}
-    50%{background-position:35% 100%}
-    100%{background-position:66% 0%}
+    0% {
+        background-position: 66% 0%
+    }
+
+    50% {
+        background-position: 35% 100%
+    }
+
+    100% {
+        background-position: 66% 0%
+    }
 }
 
 .bento {
-    min-block-size: 100vh;
-    width: 95%;
+    min-block-size: 90vh;
+    width: 90vw;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 1ch;
     padding: 1ch;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.bento button {
+    background-color: rgba(219, 50, 77, 1);
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    border: none;
+    cursor: none;
+}
+
+.bentodetails {
+    background-color: rgba(219, 50, 77, 0.8);
+    height: 30%;
+    border-radius: 1rem;
+    display: grid;
+    place-items: center;
+    bottom: 0;
+}
+
+.textdestaque {
+    font-family: MuseoModerno;
+    font-size: 1.6rem;
+    color: #fffff0;
+}
+
+#textdestaquedif {
+    font-size: 1.2rem;
+}
+
+.textsubtext {
+    font-family: MuseoModerno;
+    font-size: 2.6rem;
+    color: #fffff0;
+    text-align: left;
+}
+
+.textheader {
+    margin-top: -2vh;
+    font-family: MuseoModerno;
+    font-size: 1.3rem;
+    color: #fffff0;
+    text-align: left;
 }
 
 .bento__container {
@@ -89,19 +235,37 @@ a {
     flex: 2 0 320px;
 }
 
+#textdif {
+    margin-top: 0;
+    float: right;
+}
+
 .bento__container[variant-1] {
-    --bg: #837AED;
     grid-template-columns: 3fr 1fr 4fr;
+    background-size: cover;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .bento__container[variant-2] {
-    --bg: #72F286;
     grid-template-columns: 1fr 2fr;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .bento__container[variant-3] {
     --bg: #837AED;
     grid-template-columns: 3fr 1fr 2fr;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
 }
 
 .bento__item {
@@ -111,4 +275,78 @@ a {
     grid-row: var(--rows, span 1);
     background-color: var(--bg);
     border-radius: 1rem;
+}
+
+#bento2 {
+    min-block-size: 70vh;
+}
+
+#fillbentoul1 {
+    background-image: url('img/bentoup1.png');
+}
+
+#fillbentoul2 {
+    background-image: url('img/bentoup3.png');
+}
+
+#fillbentour1 {
+    background-image: url('img/bentoup2.png');
+}
+
+#fillbentour2 {
+    background-image: url('img/bentoup4.png');
+}
+
+#fillbentour3 {
+    background-image: url('img/bentoup5.png');
+}
+
+#fillbentour4 {
+    background-image: url('img/bentoup5.png');
+}
+
+#fillbentod1 {
+    background-image: url('img/bentodown1.png');
+}
+
+#fillbentod2 {
+    background-image: url('img/bentodown2.png');
+}
+
+#fillbentod3 {
+    background-image: url('img/bentodown3.png');
+}
+
+#fillbentod4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #DB324D;
+}
+
+#fillbentod4 img {
+    height: 70%;
+}
+
+#fillbentod5 {
+    background-image: url('img/bentodown5.png');
+}
+
+/* footer css */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 0%;
+    position: relative;
+    bottom: 0;
+}
+
+#logofin {
+    width: 60%;
 }
