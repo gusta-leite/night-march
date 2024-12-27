@@ -4,13 +4,143 @@
     }
 
     #logofin {
-        min-width: 70%;
+        min-width: 90%;
+    }
+
+    .container-buttons-mob {
+        position: relative;
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5vw;
+        overflow: contain;
+        cursor: none;
+        height: 10%;
+        top: 74%;
+        line-height: 1.1;
+    }
+
+    .button-mob {
+        font-size: 0.9rem;
+        background-color: #121113;
+        text-decoration: none;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 3%;
+    }
+
+    .container-buttons-mob div {
+        margin-top: 2%;
+        background-color: #121113;
+        padding: 5%;
+        padding-top: 8%;
+        padding-bottom: 8%;
+        border-radius: 0.8rem 0.8rem 2rem 2rem;
+    }
+
+    .neon-mob {
+        width: 100%;
+    }
+
+    .container-info-mob {
+        position: relative;
+        width: 40%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5vw;
+        overflow: contain;
+        cursor: none;
+        text-align: center;
+        top: -10%;
+    }
+
+    .container-info-mob div {
+        margin-top: 2%;
+        background-color: #121113;
+        padding: 5%;
+        border-radius: 0.8rem;
     }
 }
 
 @media (min-width: 768px) {
     .hero {
         margin-top: -12vh;
+    }
+
+    #show_mobile {
+        display: none;
+    }
+
+    .button {
+        background-color: #121113;
+        text-decoration: none;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 3%;
+    }
+
+    .container-buttons div {
+        margin-top: 2%;
+        background-color: #121113;
+        padding: 5%;
+        padding-top: 8%;
+        padding-bottom: 8%;
+        border-radius: 0.8rem 0.8rem 3rem 3rem;
+    }
+
+    .container-buttons {
+        position: relative;
+        width: 15%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5vw;
+        overflow: contain;
+        cursor: none;
+        height: 10%;
+        float: right;
+        margin-right: 2%;
+        top: 55%;
+        line-height: 1.1;
+    }
+
+    .column-button {
+        flex: 1;
+        text-align: center;
+    }
+
+    .container-info {
+        position: relative;
+        width: 20%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5vw;
+        overflow: contain;
+        cursor: none;
+        height: 10%;
+        float: left;
+        margin-left: 2%;
+        text-align: center;
+        top: 10%;
+    }
+
+    .container-info div {
+        margin-top: 2%;
+        background-color: #121113;
+        padding: 5%;
+        border-radius: 0.8rem;
+    }
+
+    .neon {
+        position: relative;
+        width: 20%;
+        float: left;
+        left: -20%;
+        top: 73%;
     }
 }
 
@@ -143,77 +273,11 @@ a {
     background-position: center;
 }
 
-.hero button {
-    background-color: #121113;
-    text-decoration: none;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 3%;
-}
-
-.container-buttons div {
-    margin-top: 2%;
-    background-color: #121113;
-    padding: 5%;
-    padding-top: 8%;
-    padding-bottom: 8%;
-    border-radius: 0.8rem 0.8rem 3rem 3rem;
-}
-
 .hero span {
     font-family: MuseoModerno;
     font-size: 1.3rem;
     color: #fffff0;
     text-align: center;
-}
-
-.container-buttons {
-    position: relative;
-    width: 15%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5vw;
-    overflow: contain;
-    cursor: none;
-    height: 10%;
-    float: right;
-    margin-right: 2%;
-    top: 55%;
-    line-height: 1.1;
-}
-
-.column-button {
-    flex: 1;
-    text-align: center;
-}
-
-.container-info {
-    position: relative;
-    width: 20%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5vw;
-    overflow: contain;
-    cursor: none;
-    height: 10%;
-    float: left;
-    margin-left: 2%;
-    text-align: center;
-    top: 10%;
-}
-
-.container-info div {
-    margin-top: 2%;
-    background-color: #121113;
-    padding: 5%;
-    border-radius: 0.8rem;
-}
-
-#buttondesc {
-    background-color: #121113;
-    text-justify: auto;
 }
 
 .landing {
@@ -315,7 +379,7 @@ a {
 
 .textdestaque {
     font-family: MuseoModerno;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     color: #fffff0;
 }
 
@@ -354,6 +418,7 @@ a {
     background-size: cover;
     width: 100%;
     height: 100%;
+    background-repeat: no-repeat;
 }
 
 .bento__container[variant-2] {
@@ -361,11 +426,13 @@ a {
     background-size: cover;
     width: 100%;
     height: 100%;
+    background-repeat: no-repeat;
 }
 
 .bento__container[variant-3] {
     grid-template-columns: 3fr 1fr 2fr;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .bento__item {
@@ -457,19 +524,27 @@ a {
 
 .container-title p {
     font-family: MuseoModerno;
-    font-size: 2.7rem;
+    font-size: 2.5rem;
     padding-right: 75%;
     color: #fffff0;
     text-align: left;
     line-height: 1;
 }
 
+.coluna-title-mob p {
+    font-family: MuseoModerno;
+    font-size: 2rem;
+    padding-right: 20%;
+    color: #fffff0;
+    text-align: left;
+    line-height: 1;
+}
 
 .container-test {
     position: relative;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2.2vw;
     overflow: hidden;
     height: 45vh;
