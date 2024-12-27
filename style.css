@@ -41,12 +41,43 @@ a {
     z-index: 2;
 }
 
+.cursor2 {
+    mix-blend-mode: exclusion;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 3;
+}
+
 .select {
+    mix-blend-mode: exclusion;
     pointer-events: none;
     position: fixed;
     top: 0;
     left: 0;
     transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.selectmini {
+    mix-blend-mode: exclusion;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.testm {
+    mix-blend-mode: exclusion;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0, 6;
 }
 
 /* nav css */
@@ -61,8 +92,6 @@ a {
     margin-left: auto;
     margin-right: auto;
     height: 10vh;
-    margin-top: 3vh;
-    gap: 1ch;
 }
 
 .nav-item {
@@ -78,8 +107,11 @@ a {
     width: 70%;
 }
 
-.navbar a {
+.navbar span {
     color: #fffff0;
+}
+
+.navbar a {
     font-family: MuseoModerno;
     display: inline-block;
     text-align: center;
@@ -89,6 +121,7 @@ a {
 
 .nav-item a:hover {
     text-decoration: underline;
+    text-decoration-color: #fffff0;
     cursor: none;
 }
 
@@ -104,71 +137,147 @@ a {
     overflow-x: hidden;
     object-fit: contain;
     background-color: #121113;
+    height: 100vh;
+    background-image: url(assets/images/hero.png);
+    background-size: cover;
+    background-position: center;
 }
 
+.hero button {
+    background-color: #121113;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 3%;
+}
+
+.container-buttons div {
+    margin-top: 2%;
+    background-color: #121113;
+    padding: 5%;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    border-radius: 0.8rem 0.8rem 3rem 3rem;
+}
+
+.hero span {
+    font-family: MuseoModerno;
+    font-size: 1.3rem;
+    color: #fffff0;
+    text-align: center;
+}
+
+.container-buttons {
+    position: relative;
+    width: 15%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    overflow: contain;
+    cursor: none;
+    height: 10%;
+    float: right;
+    margin-right: 2%;
+    top: 55%;
+    line-height: 1.1;
+}
+
+.column-button {
+    flex: 1;
+    text-align: center;
+}
+
+.container-info {
+    position: relative;
+    width: 20%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    overflow: contain;
+    cursor: none;
+    height: 10%;
+    float: left;
+    margin-left: 2%;
+    text-align: center;
+    top: 10%;
+}
+
+.container-info div {
+    margin-top: 2%;
+    background-color: #121113;
+    padding: 5%;
+    border-radius: 0.8rem;
+}
+
+#buttondesc {
+    background-color: #121113;
+    text-justify: auto;
+}
 
 .landing {
-    background: linear-gradient(329deg, #121113, #2640ea, #121113, #121113);
-    background-size: 800% 800%;
-    -webkit-animation: gradient 30s ease infinite;
-    -moz-animation: gradient 30s ease infinite;
-    -o-animation: gradient 30s ease infinite;
-    animation: gradient 30s ease infinite;
+    background: linear-gradient(151deg, #121113, #2640ea, #121113, #121113, #121113);
+    background-size: 1000% 1000%;
+    -webkit-animation: gradient 34s ease infinite;
+    -moz-animation: gradient 34s ease infinite;
+    -o-animation: gradient 34s ease infinite;
+    animation: gradient 34s ease infinite;
 }
 
 @-webkit-keyframes gradient {
     0% {
-        background-position: 66% 0%
+        background-position: 22% 0%
     }
 
     50% {
-        background-position: 35% 100%
+        background-position: 79% 100%
     }
 
     100% {
-        background-position: 66% 0%
+        background-position: 22% 0%
     }
 }
 
 @-moz-keyframes gradient {
     0% {
-        background-position: 66% 0%
+        background-position: 22% 0%
     }
 
     50% {
-        background-position: 35% 100%
+        background-position: 79% 100%
     }
 
     100% {
-        background-position: 66% 0%
+        background-position: 22% 0%
     }
 }
 
 @-o-keyframes gradient {
     0% {
-        background-position: 66% 0%
+        background-position: 22% 0%
     }
 
     50% {
-        background-position: 35% 100%
+        background-position: 79% 100%
     }
 
     100% {
-        background-position: 66% 0%
+        background-position: 22% 0%
     }
 }
 
 @keyframes gradient {
     0% {
-        background-position: 66% 0%
+        background-position: 22% 0%
     }
 
     50% {
-        background-position: 35% 100%
+        background-position: 79% 100%
     }
 
     100% {
-        background-position: 66% 0%
+        background-position: 22% 0%
     }
 }
 
@@ -190,29 +299,32 @@ a {
     width: 100%;
     border-radius: 1rem;
     border: none;
-    cursor: none;
 }
 
 .bentodetails {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(219, 50, 77, 0.8);
-    height: 30%;
+    height: 20%;
+    width: 100%;
     border-radius: 1rem;
-    display: grid;
     place-items: center;
     bottom: 0;
 }
 
 .textdestaque {
     font-family: MuseoModerno;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #fffff0;
 }
 
 #textdestaquedif {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .textsubtext {
+    position: absolute;
     font-family: MuseoModerno;
     font-size: 2.6rem;
     color: #fffff0;
@@ -220,11 +332,13 @@ a {
 }
 
 .textheader {
-    margin-top: -2vh;
+    position: absolute;
     font-family: MuseoModerno;
-    font-size: 1.3rem;
+    font-weight: 250;
+    font-size: 1.1rem;
     color: #fffff0;
     text-align: left;
+    top: 7vh;
 }
 
 .bento__container {
@@ -235,15 +349,8 @@ a {
     flex: 2 0 320px;
 }
 
-#textdif {
-    margin-top: 0;
-    float: right;
-}
-
 .bento__container[variant-1] {
     grid-template-columns: 3fr 1fr 4fr;
-    background-size: cover;
-    background-position: center center;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -251,24 +358,18 @@ a {
 
 .bento__container[variant-2] {
     grid-template-columns: 1fr 2fr;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
     background-size: cover;
     width: 100%;
     height: 100%;
 }
 
 .bento__container[variant-3] {
-    --bg: #837AED;
     grid-template-columns: 3fr 1fr 2fr;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
     background-size: cover;
 }
 
 .bento__item {
+    position: relative;
     height: 100%;
     width: 100%;
     grid-column: var(--columns, span 1);
@@ -278,43 +379,52 @@ a {
 }
 
 #bento2 {
-    min-block-size: 70vh;
+    min-block-size: 90vh;
 }
 
 #fillbentoul1 {
-    background-image: url('img/bentoup1.png');
+    background-image: url(assets/images/bentoup1.png);
+    background-position: center;
 }
 
 #fillbentoul2 {
-    background-image: url('img/bentoup3.png');
+    background-image: url(assets/images/bentoup3.png);
+    background-position: center;
+}
+
+#fillbentoul3 {
+    background-image: url(assets/images/bentoup6.png);
+    background-position: center;
 }
 
 #fillbentour1 {
-    background-image: url('img/bentoup2.png');
+    background-image: url(assets/images/bentoup2.png);
+    background-position: center;
 }
 
 #fillbentour2 {
-    background-image: url('img/bentoup4.png');
+    background-image: url(assets/images/bentoup4.png);
+    background-position: center;
 }
 
 #fillbentour3 {
-    background-image: url('img/bentoup5.png');
-}
-
-#fillbentour4 {
-    background-image: url('img/bentoup5.png');
+    background-image: url(assets/images/bentoup5.png);
+    background-position: center;
 }
 
 #fillbentod1 {
-    background-image: url('img/bentodown1.png');
+    background-image: url(assets/images/bentodown1.png);
+    background-position: center;
 }
 
 #fillbentod2 {
-    background-image: url('img/bentodown2.png');
+    background-image: url(assets/images/bentodown2.png);
+    background-position: center;
 }
 
 #fillbentod3 {
-    background-image: url('img/bentodown3.png');
+    background-image: url(assets/images/bentodown3.png);
+    background-position: center;
 }
 
 #fillbentod4 {
@@ -331,10 +441,69 @@ a {
 }
 
 #fillbentod5 {
-    background-image: url('img/bentodown5.png');
+    background-image: url(assets/images/bentodown5.png);
+}
+
+/* testimonials */
+
+.container-title {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    bottom: -1vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+
+.container-title p {
+    font-family: MuseoModerno;
+    font-size: 2.7rem;
+    padding-right: 75%;
+    color: #fffff0;
+    text-align: left;
+    line-height: 1;
+}
+
+
+.container-test {
+    position: relative;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 2.2vw;
+    overflow: hidden;
+    height: 45vh;
+    width: 70%;
+}
+
+.coluna-circle {
+    border-radius: 50%;
+    background-color: #fffff0;
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    float: left;
+}
+
+.coluna-circle p {
+    font-family: MuseoModerno;
+    font-size: 1.3rem;
+    color: #DB324D;
+    text-align: left;
+}
+
+.coluna-circle span {
+    font-family: MuseoModerno;
+    font-size: 1.4rem;
+    color: #DB324D;
+    text-align: left;
 }
 
 /* footer css */
+
 footer {
     display: flex;
     flex-direction: column;
@@ -348,5 +517,5 @@ footer {
 }
 
 #logofin {
-    width: 60%;
+    width: 70%;
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="imagex/png" href="">
+    <link rel="shortcut icon" type="imagex/png" href="assets/images/ico.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap"
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 
-    <title> night march </title>
+    <title> the night march </title>
 
     <title>Document</title>
 </head>
@@ -36,17 +36,20 @@
                     <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" type="button" aria-current="page" href="">
-                                <img src="img/logo navbar.svg">
+                                <img src="assets/images/logo navbar.svg">
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" type="button" aria-current="page" href="#home">Home</a>
+                            <a class="nav-link active" type="button" aria-current="page" href="#home"><span> home</span>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" type="button" aria-current="page" href="#">reservas</a>
+                            <a class="nav-link active" type="button" aria-current="page" href="#"><span> reservas
+                                </span> </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" type="button" aria-current="page" href="#">delivery</a>
+                            <a class="nav-link active" type="button" aria-current="page" href="#"><span> delivery
+                                </span> </a>
                         </li>
                     </ul>
                 </div>
@@ -59,24 +62,80 @@
                     <circle cx="50" cy="50" r="50" fill="#DB324D" style="mix-blend-mode:exclusion" />
                 </svg>
             </div>
-
-            <div class="select">
-                <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M51.45 67.45L48.35 64.85L59.6 53.3C59.8333 53.1 60 52.9333 60.1 52.8C60.2333 52.6667 60.3167 52.5667 60.35 52.5H33.75V48.3H60.4C60.3333 48.2 60.2333 48.1 60.1 48C60 47.8667 59.8333 47.6833 59.6 47.45L48.45 36.1L51.4 33.35L63.75 45.95C64.5833 46.7833 65.2 47.5333 65.6 48.2C66.0333 48.8667 66.25 49.5833 66.25 50.35C66.25 51.0833 66.0333 51.8167 65.6 52.55C65.2 53.25 64.5833 54.0167 63.75 54.85L51.45 67.45Z"
-                        fill="#FFFFF0" style="mix-blend-mode:difference" />
-                    <path
-                        d="M100 50C100 77.6142 77.6142 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0C77.6142 0 100 22.3858 100 50Z"
-                        fill="#AAC64D" style="mix-blend-mode:exclusion" />
+            <div class="cursor2" id="not_show">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g style="mix-blend-mode:exclusion">
+                        <path
+                            d="M12.5 0L16.9194 8.08059L25 12.5L16.9194 16.9194L12.5 25L8.08055 16.9194L0 12.5L8.08055 8.08059L12.5 0Z"
+                            fill="#AAC64D" />
+                    </g>
                 </svg>
             </div>
+
+            <div class="select" id="not_show">
+                <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g style="mix-blend-mode:exclusion">
+                        <path
+                            d="M100 50C100 77.6142 77.6142 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0C77.6142 0 100 22.3858 100 50Z"
+                            fill="#AAC64D" style="mix-blend-mode:exclusion" />
+                    </g>
+                </svg>
+            </div>
+
+            <div class="selectmini" id="not_show">
+                <svg width="30" height="30" viewBox="0 0 33 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g style="mix-blend-mode:exclusion">
+                        <path
+                            d="M17.7 34.1L14.6 31.5L25.85 19.95C26.0833 19.75 26.25 19.5833 26.35 19.45C26.4833 19.3167 26.5667 19.2167 26.6 19.15H0V14.95H26.65C26.5833 14.85 26.4833 14.75 26.35 14.65C26.25 14.5167 26.0833 14.3333 25.85 14.1L14.7 2.75L17.65 0L30 12.6C30.8333 13.4333 31.45 14.1833 31.85 14.85C32.2833 15.5167 32.5 16.2333 32.5 17C32.5 17.7333 32.2833 18.4667 31.85 19.2C31.45 19.9 30.8333 20.6667 30 21.5L17.7 34.1Z"
+                            fill="#FFFFF0" style="mix-blend-mode:difference" />
+                    </g>
+                </svg>
+
+            </div>
+
+            <div class="testm" id="not_show">
+                <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g style="mix-blend-mode:exclusion">
+                        <path
+                            d="M100 50C100 77.6142 77.6142 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0C77.6142 0 100 22.3858 100 50Z"
+                            fill="#AAC64D" style="mix-blend-mode:exclusion" />
+                    </g>
+                    <g style="mix-blend-mode:exclusion">
+                        <path
+                            d="M64.8991 37.0771C63.9243 36.1023 62.7634 35.3284 61.4837 34.8002C60.204 34.272 58.8309 34 57.444 34C56.0572 34 54.6841 34.272 53.4044 34.8002C52.1246 35.3284 50.9638 36.1023 49.989 37.0771C49.0142 36.1023 47.8533 35.3284 46.5736 34.8002C45.2939 34.272 43.9208 34 42.5339 34C41.1471 34 39.774 34.272 38.4942 34.8002C37.2145 35.3284 36.0536 36.1023 35.0789 37.0771C33.106 39.0545 32 41.7197 32 44.4965C32 47.2732 33.106 49.9384 35.0789 51.9159L48.7105 65.4737C48.8779 65.6405 49.077 65.7728 49.2965 65.8632C49.5159 65.9535 49.7513 66 49.989 66C50.2267 66 50.4621 65.9535 50.6815 65.8632C50.9009 65.7728 51.1001 65.6405 51.2675 65.4737L64.8991 51.9159C66.885 49.9452 68 47.2775 68 44.4965C68 41.7155 66.885 39.0477 64.8991 37.0771Z"
+                            fill="#FFFFF0" />
+                    </g>
+                </svg>
+
+            </div>
+
         </section>
 
         <div class="hero"> <!-- hero section-->
-            <div class="heroimg">
-                <img src="img/hero.png" style="width: 100%;">
+            <div class="container-buttons">
+                <button class="button" id="column-button" style="padding: 5%;">
+                    <a href="#"><span> reserve sua mesa → </span></a>
+                </button>
+                <button class="button" id="column-button" style="padding: 5%;">
+                    <a href="#"><span> peça delivery ↓</span></a>
+                </button>
+                <div id="buttonsdesc">
+                    <span style="font-size: 1.4rem; font-weight: 250;">Other S¡de, chega ao The Night March nessa terça
+                        trazendo o mais saudoso rock ao nosso
+                        salão!</span>
+                </div>
+            </div>
+
+            <div class="container-info">
+                <div id="column-info">
+                    <img src="assets/images/logobanda.svg">
+                </div>
+                <div id="buttonsdesc">
+                    <span>terça feira - 07/01</span>
+                </div>
             </div>
         </div>
+
         <div class="landing">
 
             <br /><br /><br /><br />
@@ -88,14 +147,14 @@
                             <p class="textdestaque"> marchburger, o mais amado da casa </p>
                         </div>
                     </div>
-                    <div class="bento__item" style="--rows: span 2;">
-                        <button class="button">
-                            <span class="textheader">peça delivery ↓</span>
-                        </button>
+                    <div class="bento__item" style="--rows: span 2;" id="fillbentoul3">
+                        <div class="bentodetails">
+                            <p class="textdestaque" id="textdestaquedif"> vampire fries </p>
+                        </div>
                     </div>
                     <div class="bento__item" style="--rows: span 2; --columns: span 2;" id="fillbentoul2">
                         <div class="bentodetails">
-                            <p class="textdestaque" id="textdestaquedif"> sunset illusion </p>
+                            <p class="textdestaque" id="textdestaquedif"> nightwolf </p>
                         </div>
                     </div>
                     <div class="bento__item" style="--columns: 1 / -1;">
@@ -107,10 +166,10 @@
                 <div class="bento__container" variant-2>
                     <div class="bento__item" style="--rows: span 2; --columns: 1 / -1;" id="fillbentour1">
                         <div class="bentodetails">
-                            <p class="textdestaque" id="textdestaquedif"> nightwolf </p>
+                            <p class="textdestaque"> sunset illusion </p>
                         </div>
                     </div>
-                    <div class="bento__item" style="--rows: span 4;" id="fillbentour2">
+                    <div class="bento__item" style="--rows: span 2;" id="fillbentour2">
                         <div class="bentodetails">
                             <p class="textdestaque" id="textdestaquedif"> medida certa de corona</p>
                         </div>
@@ -120,18 +179,47 @@
                             <p class="textdestaque" id="textdestaquedif"> nightime coffee </p>
                         </div>
                     </div>
-                    <div class="bento__item" style="--rows: span 2;">
-                        <p> <span class="textsubtext" id="textdif">Nossos drinks</span> </p>
-                        <p class="textheader" id="textdif">os mais amados drinks da nossa coleção.</p>
+                    <div class="bento__item" style="--columns: 1 / -1;" id="0">
+                        <p> <span class="textsubtext">Nossos drinks</span> </p>
+                        <p class="textheader">os mais amados drinks da nossa coleção.</p>
                     </div>
                 </div>
             </div>
 
+            <br /><br /><br />
+
             <section> <!-- testimonials-->
-                <div class="testimonials">
-                    <div></div>
+                <div class="container-title">
+                    <div class="coluna-title">
+                        <p> O que dizem de nós</p>
+                    </div>
+                </div>
+                <div class="container-test">
+                    <div class="coluna-circle">
+                        <p>★ ★ ★ ★ ★</p>
+                        <span>
+                            <p>O som e os sabores são impecáveis.</p>
+                        </span>
+                        <p>Clara Fontes</p>
+                    </div>
+                    <div class="coluna-circle">
+                        <p>★ ★ ★ ★ </p>
+                        <span>
+                            <p>O marchburger me deixa com água na boca sempre que penso sobre.</p>
+                        </span>
+                        <p>Ravi Solano</p>
+                    </div>
+                    <div class="coluna-circle">
+                        <p>★ ★ ★ ★ ★</p>
+                        <span>
+                            <p>Anos se possam e não consigo pensar em outro lugar.</p>
+                        </span>
+                        <p>Pedro Nasso</p>
+                    </div>
                 </div>
             </section>
+
+            <br /><br /><br /><br />
 
             <section> <!-- bentobox images-->
                 <div class="bento" id="bento2">
@@ -140,15 +228,15 @@
                         <div class="bento__item" style="--rows: span 2; --columns: span 2;" id="fillbentod2"></div>
                         <div class="bento__item" style="--rows: span 3;" id="fillbentod3"></div>
                         <div class="bento__item" style="--rows: span 2;" id="fillbentod4">
-                            <img src="img/logo navbar.svg">
+                            <img src="assets/images/logo navbar.svg" width="90%">
                         </div>
                         <div class="bento__item" style="--rows: span 2;" id="fillbentod5"></div>
                     </div>
                 </div>
-                <br /><br /><br />
+
                 <div id="footer">
                     <footer>
-                        <img src="img/logo footer.svg" id="logofin">
+                        <img src="assets/images/logo footer.svg" id="logofin">
                     </footer>
                 </div>
             </section>
